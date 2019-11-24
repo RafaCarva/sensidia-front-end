@@ -11,6 +11,31 @@
       <p>Auth Type - Time Based - OTP</p>
 
       <button class="btn btn-lg btn-danger btn-block btn-signin" (click)="disabledTfa()">Disable TFA</button>
+
+      <div class="card card-container">
+          <h2>User data:</h2>
+        <ul>
+          <li>User Name: {{userName}}</li>
+        <li>User Password: {{userPass}}</li>
+        </ul>
+
+        <h2>Technologies used:</h2>
+        <ul>
+          <li>Angular</li>
+          <li>Node</li>
+          <li>bootstrap</li>
+        </ul>
+        <h2>References:</h2>
+        <ul>
+          <li><a href="https://hackernoon.com/create-an-angular-7-google-authenticator-node-js-web-app-with-two-factor-authentication-95e87af9356b">hackernoon.com</a></li>
+          <li><a href="https://school.geekwall.in/p/HJWr08NcE/angular-7-google-authenticator-node-js-with-two-factor-authentication">school.geekwall.in --> (I would not have been able to do this test without this link...)</a></li>
+        </ul>
+        <h2>Github:</h2>
+        <ul>
+          <li><a href="https://github.com/RafaCarva/sensidia-back-end">sensidia-back-end</a></li>
+          <li><a href="https://github.com/RafaCarva/sensidia-front-end">sensidia-front-end</a></li>
+        </ul>
+      </div>
     </div>
     <div *ngIf="!tfa.secret">
 
@@ -37,4 +62,5 @@
       </span>
     </div>
   </div>
+
 </div>

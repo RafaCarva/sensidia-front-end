@@ -12,6 +12,9 @@ export class LoginServiceService {
 
   authSub = new Subject<any>();
 
+  userLogin = null;
+  userPass = null;
+
   constructor(private _http: HttpClient) {
   }
 
@@ -30,6 +33,8 @@ export class LoginServiceService {
   }
 
   registerUser(userObj: any) {
+    this.userLogin = userObj.uname;
+    this.userPass = userObj.upass;
     return this._http.post("http://localhost:3000/register", { uname: userObj.uname, upass: userObj.upass }, { observe: "response" });
   }
 

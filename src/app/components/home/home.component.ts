@@ -11,12 +11,16 @@ export class HomeComponent implements OnInit {
   tfa: any = {};
   authcode: string = "";
   errorMessage: string = null;
+  userName:string= null;
+  userPass:String=null;
 
   constructor(private _loginService: LoginServiceService) {
     this.getAuthDetails();
   }
 
   ngOnInit() {
+    this.userName = this._loginService.userLogin;
+    this.userPass = this._loginService.userPass;
   }
 
   getAuthDetails() {
